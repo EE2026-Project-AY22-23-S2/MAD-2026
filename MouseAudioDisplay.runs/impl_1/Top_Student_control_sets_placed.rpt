@@ -1,0 +1,102 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Mar 22 16:49:39 2023
+| Host         : EED0966 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
+| Design       : Top_Student
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    33 |
+| Unused register locations in slices containing registers |   110 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            9 |
+|      4 |            1 |
+|      6 |            2 |
+|      8 |            1 |
+|     10 |            1 |
+|    16+ |           19 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              80 |           20 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             668 |           98 |
+| Yes          | No                    | No                     |              34 |            6 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             180 |           33 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+------------------+----------------+
+|               Clock Signal               |                     Enable Signal                     |                    Set/Reset Signal                   | Slice Load Count | Bel Load Count |
++------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+------------------+----------------+
+|  aud_out_indv/clk50M/C50M                |                                                       |                                                       |                1 |              2 |
+|  J_MIC_Pin1_OBUF_BUFG                    | aud_in_indv/my_audio_unit/led_reg[6]                  | aud_in_indv/my_audio_unit/SR[5]                       |                1 |              2 |
+|  J_MIC_Pin1_OBUF_BUFG                    | aud_in_indv/my_audio_unit/led_reg[7]                  | aud_in_indv/my_audio_unit/SR[6]                       |                1 |              2 |
+|  J_MIC_Pin1_OBUF_BUFG                    | aud_in_indv/my_audio_unit/led_reg[3]                  | aud_in_indv/my_audio_unit/SR[2]                       |                1 |              2 |
+|  J_MIC_Pin1_OBUF_BUFG                    | aud_in_indv/my_audio_unit/led_reg[5]                  | aud_in_indv/my_audio_unit/SR[4]                       |                1 |              2 |
+|  J_MIC_Pin1_OBUF_BUFG                    | aud_in_indv/my_audio_unit/led_reg[2]                  | aud_in_indv/my_audio_unit/SR[1]                       |                1 |              2 |
+|  J_MIC_Pin1_OBUF_BUFG                    | aud_in_indv/my_audio_unit/led_reg[8]                  | aud_in_indv/my_audio_unit/SR[7]                       |                1 |              2 |
+|  CLK_OUT_OBUF_BUFG                       |                                                       |                                                       |                1 |              2 |
+| ~oledClk                                 |                                                       |                                                       |                1 |              2 |
+|  J_MIC_Pin1_OBUF_BUFG                    | aud_in_indv/my_audio_unit/E[0]                        | aud_in_indv/my_audio_unit/SR[3]                       |                1 |              4 |
+|  J_MIC_Pin1_OBUF_BUFG                    | aud_in_indv/my_audio_unit/E[2]                        | aud_in_indv/my_audio_unit/SR[0]                       |                2 |              6 |
+|  CLK_OUT_OBUF_BUFG                       | aud_out_indv/aud/FSM_onehot_current_state[3]_i_1_n_0  |                                                       |                1 |              6 |
+|  CLK_OUT_OBUF_BUFG                       | aud_out_indv/aud/FSM_onehot_current_state_reg_n_0_[1] |                                                       |                2 |              8 |
+|  J_MIC_Pin1_OBUF_BUFG                    | aud_in_indv/my_audio_unit/E[1]                        | aud_in_indv/led[0]_i_1_n_0                            |                2 |             10 |
+| ~aud_in_indv/my_audio_unit/temp_reg[0]_0 |                                                       |                                                       |                3 |             24 |
+|  J_MIC_Pin1_OBUF_BUFG                    |                                                       |                                                       |                5 |             24 |
+|  clock_IBUF_BUFG                         |                                                       | J_MIC_Pin1_OBUF_BUFG                                  |                3 |             24 |
+|  CLK_OUT_OBUF_BUFG                       | aud_out_indv/aud/temp2                                |                                                       |                4 |             24 |
+|  clock_IBUF_BUFG                         |                                                       |                                                       |                9 |             26 |
+| ~oledClk                                 |                                                       | reset_IBUF                                            |                4 |             34 |
+| ~oledClk                                 | oled_dig_indv/od0/delay[0]_i_1_n_0                    | reset_IBUF                                            |                5 |             40 |
+|  CLK_OUT_OBUF_BUFG                       | aud_out_indv/aud/FSM_onehot_current_state_reg_n_0_[1] | aud_out_indv/aud/FSM_onehot_current_state_reg_n_0_[0] |                7 |             44 |
+|  clock_IBUF_BUFG                         |                                                       | aud_out_indv/moduleButtonC/dbCommand                  |                8 |             54 |
+|  clock_IBUF_BUFG                         |                                                       | aud_out_indv/clk20k/clear                             |                7 |             54 |
+|  clock_IBUF_BUFG                         |                                                       | aud_out_indv/clk2f/clear                              |                7 |             54 |
+|  clock_IBUF_BUFG                         |                                                       | aud_out_indv/clk50M/clear                             |                7 |             54 |
+|  clock_IBUF_BUFG                         |                                                       | aud_out_indv/clkf/clear                               |                7 |             54 |
+|  clock_IBUF_BUFG                         |                                                       | aud_out_indv/ringerCommand_reg_n_0                    |               10 |             54 |
+|  clock_IBUF_BUFG                         |                                                       | aud_in_indv/clk20kHz/clear                            |                7 |             54 |
+|  clock_IBUF_BUFG                         |                                                       | oled_dig_indv/clk625/clear                            |                7 |             54 |
+| ~oledClk                                 | oled_dig_indv/od0/state                               | reset_IBUF                                            |               10 |             64 |
+|  J_MIC_Pin1_OBUF_BUFG                    |                                                       | aud_in_indv/peak[11]_i_1_n_0                          |               13 |             88 |
+| ~oledClk                                 |                                                       | oled_dig_indv/od0/spi_word[39]_i_1_n_0                |               18 |             90 |
++------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+------------------+----------------+
+
+

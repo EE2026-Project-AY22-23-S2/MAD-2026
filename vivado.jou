@@ -1,0 +1,41 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Mar 22 16:35:24 2023
+# Process ID: 16232
+# Current directory: D:/MyWork/TeamInt
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2508 D:\MyWork\TeamInt\MouseAudioDisplay.xpr
+# Log file: D:/MyWork/TeamInt/vivado.log
+# Journal file: D:/MyWork/TeamInt\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/MyWork/TeamInt/MouseAudioDisplay.xpr
+update_compile_order -fileset sources_1
+close [ open D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_0.v w ]
+add_files D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_0.v
+close [ open D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_4.v w ]
+add_files D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_4.v
+close [ open D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_5.v w ]
+add_files D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_5.v
+close [ open D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_6.v w ]
+add_files D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_6.v
+update_compile_order -fileset sources_1
+close [ open D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/OledDigitsModule.v w ]
+add_files D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/OledDigitsModule.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {D:/MyWork/TeamInt/MouseAudioDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/MyWork/TeamInt/MouseAudioDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
