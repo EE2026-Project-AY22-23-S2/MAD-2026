@@ -17,34 +17,42 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir D:/MyWork/TeamInt/MouseAudioDisplay.cache/wt [current_project]
-set_property parent.project_path D:/MyWork/TeamInt/MouseAudioDisplay.xpr [current_project]
+set_property webtalk.parent_dir /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.cache/wt [current_project]
+set_property parent.project_path /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo d:/MyWork/TeamInt/MouseAudioDisplay.cache/ip [current_project]
+set_property ip_output_repo /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/AudioInModule.v
-  D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/AudioOutModule.v
-  D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Audio_Input.v
-  D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/OledDigitsModule.v
-  D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Oled_Display.v
-  D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/buttonModule.v
-  D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/clk.v
-  D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/dbModule.v
-  D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_0.v
-  D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_4.v
-  D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_5.v
-  D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_6.v
-  D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/ringerModule.v
-  D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/Top_Student.v
+  /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/AudioInModule.v
+  /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/AudioOutModule.v
+  /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Audio_Input.v
+  /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/OledDigitsModule.v
+  /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Oled_Display.v
+  /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/SixTwoFive_CLOCK.v
+  /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/buttonModule.v
+  /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/clk.v
+  /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/convertXY.v
+  /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/dbModule.v
+  /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/mouse_disp_indv.v
+  /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_0.v
+  /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_4.v
+  /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_5.v
+  /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_6.v
+  /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/ringerModule.v
+  /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/Top_Student.v
 }
-read_vhdl -library xil_defaultlib D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Audio_Output.vhd
+read_vhdl -library xil_defaultlib {
+  /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Audio_Output.vhd
+  /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Mouse_Control.vhd
+  /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Ps2Interface.vhd
+}
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -53,8 +61,8 @@ read_vhdl -library xil_defaultlib D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sourc
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/MyWork/TeamInt/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc
-set_property used_in_implementation false [get_files D:/MyWork/TeamInt/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
+read_xdc /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc
+set_property used_in_implementation false [get_files /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]
