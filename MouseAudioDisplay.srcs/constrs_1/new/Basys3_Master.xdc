@@ -177,30 +177,30 @@ set_property PACKAGE_PIN C16 [get_ports {pmoden}]
 
 
 ##Pmod Header JC
-##Sch name = JC1
-#set_property PACKAGE_PIN K17 [get_ports {nSync}]					
-#	set_property IOSTANDARD LVCMOS33 [get_ports {nSync}]
-##Sch name = JC2
-#set_property PACKAGE_PIN M18 [get_ports {D1}]					
-#	set_property IOSTANDARD LVCMOS33 [get_ports {D1}]
-##Sch name = JC3
+#Sch name = JC1
+set_property PACKAGE_PIN K17 [get_ports {cs1}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {cs1}]
+#Sch name = JC2
+set_property PACKAGE_PIN M18 [get_ports {sdin1}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sdin1}]
+#Sch name = JC3
 #set_property PACKAGE_PIN N17 [get_ports {D2}]					
 #	set_property IOSTANDARD LVCMOS33 [get_ports {D2}]
-##Sch name = JC4
-#set_property PACKAGE_PIN P18 [get_ports {CLK_OUT}]					
-#	set_property IOSTANDARD LVCMOS33 [get_ports {CLK_OUT}]
-##Sch name = JC7
-#set_property PACKAGE_PIN L17 [get_ports {JC[4]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JC[4]}]
-##Sch name = JC8
-#set_property PACKAGE_PIN M19 [get_ports {JC[5]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JC[5]}]
-##Sch name = JC9
-#set_property PACKAGE_PIN P17 [get_ports {JC[6]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JC[6]}]
-##Sch name = JC10
-#set_property PACKAGE_PIN R18 [get_ports {JC[7]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JC[7]}]
+#Sch name = JC4
+set_property PACKAGE_PIN P18 [get_ports {sclk1}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sclk1}]
+#Sch name = JC7
+set_property PACKAGE_PIN L17 [get_ports {d_cn1}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {d_cn1}]
+#Sch name = JC8
+set_property PACKAGE_PIN M19 [get_ports {resn1}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {resn1}]
+#Sch name = JC9
+set_property PACKAGE_PIN P17 [get_ports {vccen1}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {vccen1}]
+#Sch name = JC10
+set_property PACKAGE_PIN R18 [get_ports {pmoden1}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {pmoden1}]
 
 
 ##Pmod Header JXADC
@@ -270,12 +270,12 @@ set_property PACKAGE_PIN N2 [get_ports J_MIC_Pin4]
 
 
 ##USB HID (PS/2)
-#set_property PACKAGE_PIN C17 [get_ports PS2Clk]						
-	#set_property IOSTANDARD LVCMOS33 [get_ports PS2Clk]
-	#set_property PULLUP true [get_ports PS2Clk]
-#set_property PACKAGE_PIN B17 [get_ports PS2Data]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports PS2Data]	
-	#set_property PULLUP true [get_ports PS2Data]
+set_property PACKAGE_PIN C17 [get_ports PS2Clk]						
+	set_property IOSTANDARD LVCMOS33 [get_ports PS2Clk]
+	set_property PULLUP true [get_ports PS2Clk]
+set_property PACKAGE_PIN B17 [get_ports PS2Data]					
+	set_property IOSTANDARD LVCMOS33 [get_ports PS2Data]	
+	set_property PULLUP true [get_ports PS2Data]
 
 
 ##Quad SPI Flash

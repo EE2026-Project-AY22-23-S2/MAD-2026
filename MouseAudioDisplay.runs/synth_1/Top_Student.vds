@@ -1,13 +1,13 @@
 #-----------------------------------------------------------
 # Vivado v2018.2 (64-bit)
-# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Mar 22 16:48:23 2023
-# Process ID: 15628
-# Current directory: D:/MyWork/TeamInt/MouseAudioDisplay.runs/synth_1
-# Command line: vivado.exe -log Top_Student.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Student.tcl
-# Log file: D:/MyWork/TeamInt/MouseAudioDisplay.runs/synth_1/Top_Student.vds
-# Journal file: D:/MyWork/TeamInt/MouseAudioDisplay.runs/synth_1\vivado.jou
+# Start of session at: Sat Mar 25 11:38:17 2023
+# Process ID: 511808
+# Current directory: /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.runs/synth_1
+# Command line: vivado -log Top_Student.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Student.tcl
+# Log file: /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.runs/synth_1/Top_Student.vds
+# Journal file: /home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
 source Top_Student.tcl -notrace
 Command: synth_design -top Top_Student -part xc7a35tcpg236-1
@@ -15,55 +15,55 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 9860 
+INFO: Helper process launched with PID 511822 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 342.254 ; gain = 99.855
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1231.270 ; gain = 78.023 ; free physical = 1688 ; free virtual = 9619
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Top_Student' [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/Top_Student.v:14]
-INFO: [Synth 8-6157] synthesizing module 'AudioOutModule' [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/AudioOutModule.v:23]
-INFO: [Synth 8-6157] synthesizing module 'clk' [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/clk.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'clk' (1#1) [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/clk.v:23]
-INFO: [Synth 8-6157] synthesizing module 'buttonModule' [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/buttonModule.v:23]
-INFO: [Synth 8-6157] synthesizing module 'dbModule' [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/dbModule.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'dbModule' (2#1) [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/dbModule.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'buttonModule' (3#1) [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/buttonModule.v:23]
-INFO: [Synth 8-6157] synthesizing module 'ringerModule' [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/ringerModule.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'ringerModule' (4#1) [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/ringerModule.v:23]
-INFO: [Synth 8-638] synthesizing module 'Audio_Output' [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Audio_Output.vhd:63]
-INFO: [Synth 8-256] done synthesizing module 'Audio_Output' (5#1) [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Audio_Output.vhd:63]
-WARNING: [Synth 8-689] width (1) of port connection 'DATA2' does not match port width (12) of module 'Audio_Output' [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/AudioOutModule.v:55]
-INFO: [Synth 8-6155] done synthesizing module 'AudioOutModule' (6#1) [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/AudioOutModule.v:23]
-INFO: [Synth 8-6157] synthesizing module 'AudioInModule' [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/AudioInModule.v:23]
-INFO: [Synth 8-6157] synthesizing module 'Audio_Input' [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Audio_Input.v:25]
-INFO: [Synth 8-6155] done synthesizing module 'Audio_Input' (7#1) [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Audio_Input.v:25]
-WARNING: [Synth 8-6090] variable 'COUNT' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/AudioInModule.v:66]
-WARNING: [Synth 8-6090] variable 'peak' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/AudioInModule.v:68]
-WARNING: [Synth 8-6014] Unused sequential element curr_reg was removed.  [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/AudioInModule.v:55]
-WARNING: [Synth 8-6014] Unused sequential element fixed_peak_reg was removed.  [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/AudioInModule.v:67]
-WARNING: [Synth 8-6014] Unused sequential element vol_level_reg was removed.  [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/AudioInModule.v:71]
-INFO: [Synth 8-6155] done synthesizing module 'AudioInModule' (8#1) [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/AudioInModule.v:23]
-INFO: [Synth 8-6157] synthesizing module 'OledDigitsModule' [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/OledDigitsModule.v:23]
-INFO: [Synth 8-6157] synthesizing module 'oled_digit_0' [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_0.v:23]
-WARNING: [Synth 8-567] referenced signal 'x' should be on the sensitivity list [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_0.v:34]
-WARNING: [Synth 8-567] referenced signal 'y' should be on the sensitivity list [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_0.v:34]
-WARNING: [Synth 8-567] referenced signal 'sw' should be on the sensitivity list [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_0.v:34]
-INFO: [Synth 8-6155] done synthesizing module 'oled_digit_0' (9#1) [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_0.v:23]
-INFO: [Synth 8-6157] synthesizing module 'oled_digit_4' [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_4.v:23]
-WARNING: [Synth 8-567] referenced signal 'x' should be on the sensitivity list [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_4.v:33]
-WARNING: [Synth 8-567] referenced signal 'y' should be on the sensitivity list [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_4.v:33]
-WARNING: [Synth 8-567] referenced signal 'sw' should be on the sensitivity list [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_4.v:33]
-INFO: [Synth 8-6155] done synthesizing module 'oled_digit_4' (10#1) [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_4.v:23]
-INFO: [Synth 8-6157] synthesizing module 'oled_digit_5' [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_5.v:22]
-WARNING: [Synth 8-567] referenced signal 'x' should be on the sensitivity list [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_5.v:32]
-WARNING: [Synth 8-567] referenced signal 'y' should be on the sensitivity list [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_5.v:32]
-WARNING: [Synth 8-567] referenced signal 'sw' should be on the sensitivity list [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_5.v:32]
-INFO: [Synth 8-6155] done synthesizing module 'oled_digit_5' (11#1) [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_5.v:22]
-INFO: [Synth 8-6157] synthesizing module 'oled_digit_6' [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_6.v:23]
-WARNING: [Synth 8-567] referenced signal 'x' should be on the sensitivity list [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_6.v:33]
-WARNING: [Synth 8-567] referenced signal 'y' should be on the sensitivity list [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_6.v:33]
-WARNING: [Synth 8-567] referenced signal 'sw' should be on the sensitivity list [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_6.v:33]
-INFO: [Synth 8-6155] done synthesizing module 'oled_digit_6' (12#1) [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/oled_digit_6.v:23]
-INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
+INFO: [Synth 8-6157] synthesizing module 'Top_Student' [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/Top_Student.v:15]
+INFO: [Synth 8-6157] synthesizing module 'AudioOutModule' [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/AudioOutModule.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clk' [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/clk.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clk' (1#1) [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/clk.v:23]
+INFO: [Synth 8-6157] synthesizing module 'buttonModule' [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/buttonModule.v:23]
+INFO: [Synth 8-6157] synthesizing module 'dbModule' [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/dbModule.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'dbModule' (2#1) [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/dbModule.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'buttonModule' (3#1) [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/buttonModule.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ringerModule' [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/ringerModule.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ringerModule' (4#1) [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/ringerModule.v:23]
+INFO: [Synth 8-638] synthesizing module 'Audio_Output' [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Audio_Output.vhd:63]
+INFO: [Synth 8-256] done synthesizing module 'Audio_Output' (5#1) [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Audio_Output.vhd:63]
+WARNING: [Synth 8-689] width (1) of port connection 'DATA2' does not match port width (12) of module 'Audio_Output' [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/AudioOutModule.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'AudioOutModule' (6#1) [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/AudioOutModule.v:23]
+INFO: [Synth 8-6157] synthesizing module 'AudioInModule' [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/AudioInModule.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Audio_Input' [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Audio_Input.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'Audio_Input' (7#1) [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Audio_Input.v:25]
+WARNING: [Synth 8-6090] variable 'COUNT' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/AudioInModule.v:66]
+WARNING: [Synth 8-6090] variable 'peak' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/AudioInModule.v:68]
+WARNING: [Synth 8-6014] Unused sequential element curr_reg was removed.  [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/AudioInModule.v:55]
+WARNING: [Synth 8-6014] Unused sequential element fixed_peak_reg was removed.  [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/AudioInModule.v:67]
+WARNING: [Synth 8-6014] Unused sequential element vol_level_reg was removed.  [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/AudioInModule.v:71]
+INFO: [Synth 8-6155] done synthesizing module 'AudioInModule' (8#1) [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/AudioInModule.v:23]
+INFO: [Synth 8-6157] synthesizing module 'OledDigitsModule' [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/OledDigitsModule.v:23]
+INFO: [Synth 8-6157] synthesizing module 'oled_digit_0' [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_0.v:23]
+WARNING: [Synth 8-567] referenced signal 'x' should be on the sensitivity list [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_0.v:34]
+WARNING: [Synth 8-567] referenced signal 'y' should be on the sensitivity list [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_0.v:34]
+WARNING: [Synth 8-567] referenced signal 'sw' should be on the sensitivity list [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_0.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'oled_digit_0' (9#1) [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_0.v:23]
+INFO: [Synth 8-6157] synthesizing module 'oled_digit_4' [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_4.v:23]
+WARNING: [Synth 8-567] referenced signal 'x' should be on the sensitivity list [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_4.v:33]
+WARNING: [Synth 8-567] referenced signal 'y' should be on the sensitivity list [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_4.v:33]
+WARNING: [Synth 8-567] referenced signal 'sw' should be on the sensitivity list [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_4.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'oled_digit_4' (10#1) [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_4.v:23]
+INFO: [Synth 8-6157] synthesizing module 'oled_digit_5' [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_5.v:22]
+WARNING: [Synth 8-567] referenced signal 'x' should be on the sensitivity list [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_5.v:32]
+WARNING: [Synth 8-567] referenced signal 'y' should be on the sensitivity list [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_5.v:32]
+WARNING: [Synth 8-567] referenced signal 'sw' should be on the sensitivity list [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_5.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'oled_digit_5' (11#1) [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_5.v:22]
+INFO: [Synth 8-6157] synthesizing module 'oled_digit_6' [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_6.v:23]
+WARNING: [Synth 8-567] referenced signal 'x' should be on the sensitivity list [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_6.v:33]
+WARNING: [Synth 8-567] referenced signal 'y' should be on the sensitivity list [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_6.v:33]
+WARNING: [Synth 8-567] referenced signal 'sw' should be on the sensitivity list [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_6.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'oled_digit_6' (12#1) [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/oled_digit_6.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
 	Parameter Width bound to: 96 - type: integer 
 	Parameter Height bound to: 64 - type: integer 
 	Parameter PixelCount bound to: 6144 - type: integer 
@@ -114,25 +114,44 @@ INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [D:/MyWork/TeamInt/Mouse
 	Parameter SendPixel bound to: 5'b10000 
 	Parameter SpiCommandMaxWidth bound to: 40 - type: integer 
 	Parameter SpiCommandBitCountWidth bound to: 6 - type: integer 
-INFO: [Synth 8-226] default block is never used [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Oled_Display.v:123]
-INFO: [Synth 8-226] default block is never used [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Oled_Display.v:198]
-WARNING: [Synth 8-693] zero replication count - replication ignored [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Oled_Display.v:346]
-INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (13#1) [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
-WARNING: [Synth 8-567] referenced signal 'sw4' should be on the sensitivity list [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/OledDigitsModule.v:49]
-WARNING: [Synth 8-567] referenced signal 'four_disp' should be on the sensitivity list [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/OledDigitsModule.v:49]
-WARNING: [Synth 8-567] referenced signal 'sw5' should be on the sensitivity list [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/OledDigitsModule.v:49]
-WARNING: [Synth 8-567] referenced signal 'five_disp' should be on the sensitivity list [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/OledDigitsModule.v:49]
-WARNING: [Synth 8-567] referenced signal 'sw6' should be on the sensitivity list [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/OledDigitsModule.v:49]
-WARNING: [Synth 8-567] referenced signal 'six_disp' should be on the sensitivity list [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/OledDigitsModule.v:49]
-WARNING: [Synth 8-567] referenced signal 'zero_disp' should be on the sensitivity list [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/OledDigitsModule.v:49]
-INFO: [Synth 8-6155] done synthesizing module 'OledDigitsModule' (14#1) [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/OledDigitsModule.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (15#1) [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/sources_1/new/Top_Student.v:14]
+INFO: [Synth 8-226] default block is never used [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Oled_Display.v:123]
+INFO: [Synth 8-226] default block is never used [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Oled_Display.v:198]
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Oled_Display.v:346]
+INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (13#1) [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
+WARNING: [Synth 8-567] referenced signal 'sw4' should be on the sensitivity list [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/OledDigitsModule.v:49]
+WARNING: [Synth 8-567] referenced signal 'four_disp' should be on the sensitivity list [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/OledDigitsModule.v:49]
+WARNING: [Synth 8-567] referenced signal 'sw5' should be on the sensitivity list [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/OledDigitsModule.v:49]
+WARNING: [Synth 8-567] referenced signal 'five_disp' should be on the sensitivity list [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/OledDigitsModule.v:49]
+WARNING: [Synth 8-567] referenced signal 'sw6' should be on the sensitivity list [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/OledDigitsModule.v:49]
+WARNING: [Synth 8-567] referenced signal 'six_disp' should be on the sensitivity list [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/OledDigitsModule.v:49]
+WARNING: [Synth 8-567] referenced signal 'zero_disp' should be on the sensitivity list [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/OledDigitsModule.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'OledDigitsModule' (14#1) [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/OledDigitsModule.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mouse_disp_indv' [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/mouse_disp_indv.v:14]
+INFO: [Synth 8-6157] synthesizing module 'SixTwoFive_CLOCK' [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/SixTwoFive_CLOCK.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'SixTwoFive_CLOCK' (15#1) [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/SixTwoFive_CLOCK.v:23]
+INFO: [Synth 8-638] synthesizing module 'MouseCtl' [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:212]
+	Parameter SYSCLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
+	Parameter CHECK_PERIOD_MS bound to: 500 - type: integer 
+	Parameter TIMEOUT_PERIOD_MS bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'Ps2Interface' declared at '/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:156' bound to instance 'Inst_Ps2Interface' of component 'Ps2Interface' [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:374]
+INFO: [Synth 8-638] synthesizing module 'Ps2Interface' [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:184]
+INFO: [Synth 8-256] done synthesizing module 'Ps2Interface' (16#1) [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:184]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:455]
+WARNING: [Synth 8-6014] Unused sequential element x_inter_reg was removed.  [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:461]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:519]
+WARNING: [Synth 8-6014] Unused sequential element y_inter_reg was removed.  [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:525]
+INFO: [Synth 8-256] done synthesizing module 'MouseCtl' (17#1) [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:212]
+INFO: [Synth 8-6157] synthesizing module 'convertXY' [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/convertXY.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'convertXY' (18#1) [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/convertXY.v:23]
+WARNING: [Synth 8-6090] variable 'oled_data' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/mouse_disp_indv.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'mouse_disp_indv' (19#1) [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/mouse_disp_indv.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (20#1) [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/Top_Student.v:15]
 WARNING: [Synth 8-3331] design oled_digit_6 has unconnected port CLOCK
 WARNING: [Synth 8-3331] design oled_digit_5 has unconnected port CLOCK
 WARNING: [Synth 8-3331] design oled_digit_4 has unconnected port CLOCK
 WARNING: [Synth 8-3331] design oled_digit_0 has unconnected port CLOCK
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 397.016 ; gain = 154.617
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1282.895 ; gain = 129.648 ; free physical = 1691 ; free virtual = 9626
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -141,49 +160,67 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin Mouse:rst to constant 0 [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/mouse_disp_indv.v:41]
+WARNING: [Synth 8-3295] tying undriven pin Mouse:value[11] to constant 0 [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/mouse_disp_indv.v:41]
+WARNING: [Synth 8-3295] tying undriven pin Mouse:value[10] to constant 0 [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/mouse_disp_indv.v:41]
+WARNING: [Synth 8-3295] tying undriven pin Mouse:value[9] to constant 0 [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/mouse_disp_indv.v:41]
+WARNING: [Synth 8-3295] tying undriven pin Mouse:value[8] to constant 0 [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/mouse_disp_indv.v:41]
+WARNING: [Synth 8-3295] tying undriven pin Mouse:value[7] to constant 0 [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/mouse_disp_indv.v:41]
+WARNING: [Synth 8-3295] tying undriven pin Mouse:value[6] to constant 0 [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/mouse_disp_indv.v:41]
+WARNING: [Synth 8-3295] tying undriven pin Mouse:value[5] to constant 0 [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/mouse_disp_indv.v:41]
+WARNING: [Synth 8-3295] tying undriven pin Mouse:value[4] to constant 0 [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/mouse_disp_indv.v:41]
+WARNING: [Synth 8-3295] tying undriven pin Mouse:value[3] to constant 0 [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/mouse_disp_indv.v:41]
+WARNING: [Synth 8-3295] tying undriven pin Mouse:value[2] to constant 0 [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/mouse_disp_indv.v:41]
+WARNING: [Synth 8-3295] tying undriven pin Mouse:value[1] to constant 0 [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/mouse_disp_indv.v:41]
+WARNING: [Synth 8-3295] tying undriven pin Mouse:value[0] to constant 0 [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/mouse_disp_indv.v:41]
+WARNING: [Synth 8-3295] tying undriven pin Mouse:setx to constant 0 [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/mouse_disp_indv.v:41]
+WARNING: [Synth 8-3295] tying undriven pin Mouse:sety to constant 0 [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/mouse_disp_indv.v:41]
+WARNING: [Synth 8-3295] tying undriven pin Mouse:setmax_x to constant 0 [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/mouse_disp_indv.v:41]
+WARNING: [Synth 8-3295] tying undriven pin Mouse:setmax_y to constant 0 [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/mouse_disp_indv.v:41]
+WARNING: [Synth 8-3295] tying undriven pin OLED:reset to constant 0 [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/mouse_disp_indv.v:44]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 397.016 ; gain = 154.617
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1282.895 ; gain = 129.648 ; free physical = 1696 ; free virtual = 9630
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 397.016 ; gain = 154.617
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1282.895 ; gain = 129.648 ; free physical = 1696 ; free virtual = 9630
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
-CRITICAL WARNING: [Designutils 20-1307] Command 'Sch' is not supported in the xdc constraint file. [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc:125]
-CRITICAL WARNING: [Designutils 20-1307] Command 'Sch' is not supported in the xdc constraint file. [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc:128]
-CRITICAL WARNING: [Designutils 20-1307] Command 'Sch' is not supported in the xdc constraint file. [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc:131]
-CRITICAL WARNING: [Designutils 20-1307] Command 'Sch' is not supported in the xdc constraint file. [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc:134]
-Finished Parsing XDC File [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/MyWork/TeamInt/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Student_propImpl.xdc].
+Parsing XDC File [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
+CRITICAL WARNING: [Designutils 20-1307] Command 'Sch' is not supported in the xdc constraint file. [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc:125]
+CRITICAL WARNING: [Designutils 20-1307] Command 'Sch' is not supported in the xdc constraint file. [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc:128]
+CRITICAL WARNING: [Designutils 20-1307] Command 'Sch' is not supported in the xdc constraint file. [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc:131]
+CRITICAL WARNING: [Designutils 20-1307] Command 'Sch' is not supported in the xdc constraint file. [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc:134]
+Finished Parsing XDC File [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Student_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_Student_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 735.102 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1649.246 ; gain = 0.000 ; free physical = 1300 ; free virtual = 9324
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 735.102 ; gain = 492.703
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1649.246 ; gain = 496.000 ; free physical = 1413 ; free virtual = 9404
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 735.102 ; gain = 492.703
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1649.246 ; gain = 496.000 ; free physical = 1413 ; free virtual = 9404
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 735.102 ; gain = 492.703
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1649.246 ; gain = 496.000 ; free physical = 1408 ; free virtual = 9404
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "C00" won't be mapped to RAM because address size (27) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "C00" won't be mapped to RAM because address size (27) is larger than maximum supported(25)
@@ -194,6 +231,73 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_
 INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "fsm_next_state0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "C00" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Ps2Interface'
+INFO: [Synth 8-5546] ROM "reset_bit_count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "busy" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "read_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "load_tx_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ps2_clk_h" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "delay_100us_counter_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "delay_20us_counter_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "delay_63clk_counter_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'MouseCtl'
+INFO: [Synth 8-5545] ROM "periodic_check_tick" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "timeout" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reset_periodic_check_cnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "new_event" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -241,8 +345,72 @@ INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using e
                SendPixel | 00000000000000000010000000000000 |                            10000
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Oled_Display'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                00000000000000001 |                            00000
+            rx_down_edge |                00000000000000010 |                            00011
+                rx_clk_l |                00000000000000100 |                            00010
+                rx_clk_h |                00000000000001000 |                            00001
+         rx_error_parity |                00000000000010000 |                            00100
+           rx_data_ready |                00000000000100000 |                            00101
+          tx_force_clk_l |                00000000001000000 |                            00110
+      tx_bring_data_down |                00000000010000000 |                            00111
+          tx_release_clk |                00000000100000000 |                            01000
+ tx_first_wait_down_edge |                00000001000000000 |                            01001
+                tx_clk_l |                00000010000000000 |                            01010
+         tx_wait_up_edge |                00000100000000000 |                            01011
+tx_wait_up_edge_before_ack |                00001000000000000 |                            01101
+             tx_wait_ack |                00010000000000000 |                            01110
+         tx_received_ack |                00100000000000000 |                            01111
+         tx_error_no_ack |                01000000000000000 |                            10000
+                tx_clk_h |                10000000000000000 |                            01100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Ps2Interface'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   reset | 0000000000000000000000000000000000001 |                           000000
+          reset_wait_ack | 0000000000000000000000000000000000010 |                           000001
+reset_wait_bat_completion | 0000000000000000000000000000000000100 |                           000010
+           reset_wait_id | 0000000000000000000000000000000001000 |                           000011
+reset_set_sample_rate_200 | 0000000000000000000000000000000010000 |                           000100
+reset_set_sample_rate_200_wait_ack | 0000000000000000000000000000000100000 |                           000101
+reset_send_sample_rate_200 | 0000000000000000000000000000001000000 |                           000110
+reset_send_sample_rate_200_wait_ack | 0000000000000000000000000000010000000 |                           000111
+reset_set_sample_rate_100 | 0000000000000000000000000000100000000 |                           001000
+reset_set_sample_rate_100_wait_ack | 0000000000000000000000000001000000000 |                           001001
+reset_send_sample_rate_100 | 0000000000000000000000000010000000000 |                           001010
+reset_send_sample_rate_100_wait_ack | 0000000000000000000000000100000000000 |                           001011
+reset_set_sample_rate_80 | 0000000000000000000000001000000000000 |                           001100
+reset_set_sample_rate_80_wait_ack | 0000000000000000000000010000000000000 |                           001101
+reset_send_sample_rate_80 | 0000000000000000000000100000000000000 |                           001110
+reset_send_sample_rate_80_wait_ack | 0000000000000000000001000000000000000 |                           001111
+           reset_read_id | 0000000000000000000010000000000000000 |                           010000
+  reset_read_id_wait_ack | 0000000000000000000100000000000000000 |                           010001
+   reset_read_id_wait_id | 0000000000000000001000000000000000000 |                           010010
+    reset_set_resolution | 0000000000000000010000000000000000000 |                           010011
+reset_set_resolution_wait_ack | 0000000000000000100000000000000000000 |                           010100
+   reset_send_resolution | 0000000000000001000000000000000000000 |                           010101
+reset_send_resolution_wait_ack | 0000000000000010000000000000000000000 |                           010110
+reset_set_sample_rate_40 | 0000000000000100000000000000000000000 |                           010111
+reset_set_sample_rate_40_wait_ack | 0000000000001000000000000000000000000 |                           011000
+reset_send_sample_rate_40 | 0000000000010000000000000000000000000 |                           011001
+reset_send_sample_rate_40_wait_ack | 0000000000100000000000000000000000000 |                           011010
+  reset_enable_reporting | 0000000001000000000000000000000000000 |                           011011
+reset_enable_reporting_wait_ack | 0000000010000000000000000000000000000 |                           011100
+             read_byte_1 | 0000000100000000000000000000000000000 |                           011101
+             read_byte_2 | 0000001000000000000000000000000000000 |                           011110
+             read_byte_3 | 0000010000000000000000000000000000000 |                           011111
+             read_byte_4 | 0000100000000000000000000000000000000 |                           100000
+          mark_new_event | 0001000000000000000000000000000000000 |                           100100
+           check_read_id | 0010000000000000000000000000000000000 |                           100001
+  check_read_id_wait_ack | 0100000000000000000000000000000000000 |                           100010
+   check_read_id_wait_id | 1000000000000000000000000000000000000 |                           100011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'MouseCtl'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 735.102 ; gain = 492.703
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1649.246 ; gain = 496.000 ; free physical = 1405 ; free virtual = 9395
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -255,51 +423,73 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 3     
 	   2 Input     27 Bit       Adders := 8     
-	   2 Input     17 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 1     
+	   2 Input     26 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 4     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      7 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 4     
 +---Registers : 
-	               40 Bit    Registers := 1     
+	               40 Bit    Registers := 2     
 	               27 Bit    Registers := 2     
-	               17 Bit    Registers := 1     
-	               16 Bit    Registers := 2     
-	               12 Bit    Registers := 3     
+	               26 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               17 Bit    Registers := 2     
+	               16 Bit    Registers := 3     
+	               12 Bit    Registers := 9     
+	               11 Bit    Registers := 2     
 	                9 Bit    Registers := 1     
-	                7 Bit    Registers := 1     
-	                6 Bit    Registers := 1     
-	                4 Bit    Registers := 2     
-	                1 Bit    Registers := 13    
+	                8 Bit    Registers := 4     
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 6     
+	                1 Bit    Registers := 48    
 +---Muxes : 
-	   2 Input     40 Bit        Muxes := 3     
-	  32 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     40 Bit        Muxes := 6     
+	  37 Input     37 Bit        Muxes := 1     
+	   2 Input     37 Bit        Muxes := 69    
+	  32 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 4     
 	   3 Input     27 Bit        Muxes := 2     
 	   2 Input     27 Bit        Muxes := 1     
-	  32 Input     20 Bit        Muxes := 1     
-	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	  32 Input     20 Bit        Muxes := 2     
+	   2 Input     17 Bit        Muxes := 20    
+	  17 Input     17 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 5     
 	   6 Input     16 Bit        Muxes := 1     
 	   5 Input     16 Bit        Muxes := 1     
-	   2 Input     12 Bit        Muxes := 22    
+	   2 Input     12 Bit        Muxes := 32    
 	   3 Input     12 Bit        Muxes := 1     
-	   2 Input      9 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 3     
 	  11 Input      9 Bit        Muxes := 1     
+	  37 Input      8 Bit        Muxes := 3     
 	   7 Input      7 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 1     
 	   9 Input      7 Bit        Muxes := 1     
-	  32 Input      6 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 2     
-	  32 Input      5 Bit        Muxes := 1     
+	  32 Input      6 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 5     
+	  32 Input      5 Bit        Muxes := 2     
 	   4 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 1     
+	  37 Input      4 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 7     
-	   2 Input      1 Bit        Muxes := 13    
+	   2 Input      1 Bit        Muxes := 24    
 	   3 Input      1 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 1     
 	  10 Input      1 Bit        Muxes := 1     
+	  17 Input      1 Bit        Muxes := 4     
+	  37 Input      1 Bit        Muxes := 20    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -419,6 +609,67 @@ Module OledDigitsModule
 Detailed RTL Component Info : 
 +---Muxes : 
 	   2 Input     16 Bit        Muxes := 3     
+Module SixTwoFive_CLOCK 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module Ps2Interface 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 3     
++---Registers : 
+	               11 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 17    
++---Muxes : 
+	  17 Input     17 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 18    
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  17 Input      1 Bit        Muxes := 4     
+Module MouseCtl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     26 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 4     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               26 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               12 Bit    Registers := 6     
+	                8 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 17    
++---Muxes : 
+	  37 Input     37 Bit        Muxes := 1     
+	   2 Input     37 Bit        Muxes := 69    
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 10    
+	   2 Input      9 Bit        Muxes := 2     
+	  37 Input      8 Bit        Muxes := 3     
+	  37 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	  37 Input      1 Bit        Muxes := 20    
+Module mouse_disp_indv 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -445,18 +696,50 @@ INFO: [Synth 8-5545] ROM "C00" won't be mapped to RAM because address size (27) 
 INFO: [Synth 8-5545] ROM "C00" won't be mapped to RAM because address size (27) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "periodic_check_tick" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "timeout" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3331] design oled_digit_6 has unconnected port CLOCK
 WARNING: [Synth 8-3331] design oled_digit_5 has unconnected port CLOCK
 WARNING: [Synth 8-3331] design oled_digit_4 has unconnected port CLOCK
 WARNING: [Synth 8-3331] design oled_digit_0 has unconnected port CLOCK
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\aud_in_indv/an_reg[0] )
+INFO: [Synth 8-3886] merging instance 'nolabel_line29/oled_data_reg[0]' (FDR) to 'nolabel_line29/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line29/oled_data_reg[1]' (FDR) to 'nolabel_line29/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line29/oled_data_reg[2]' (FDR) to 'nolabel_line29/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line29/oled_data_reg[3]' (FDR) to 'nolabel_line29/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line29/oled_data_reg[4]' (FDR) to 'nolabel_line29/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line29/oled_data_reg[5]' (FDR) to 'nolabel_line29/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line29/oled_data_reg[6]' (FDR) to 'nolabel_line29/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line29/oled_data_reg[7]' (FDR) to 'nolabel_line29/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line29/oled_data_reg[8]' (FDR) to 'nolabel_line29/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line29/oled_data_reg[9]' (FDR) to 'nolabel_line29/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line29/oled_data_reg[10]' (FDR) to 'nolabel_line29/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line29/oled_data_reg[11]' (FDR) to 'nolabel_line29/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line29/oled_data_reg[12]' (FDR) to 'nolabel_line29/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line29/oled_data_reg[13]' (FDR) to 'nolabel_line29/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line29/oled_data_reg[14]' (FDR) to 'nolabel_line29/oled_data_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (aud_in_indv/\an_reg[0] )
 INFO: [Synth 8-3886] merging instance 'aud_in_indv/an_reg[1]' (FDSE) to 'aud_in_indv/an_reg[3]'
 INFO: [Synth 8-3886] merging instance 'aud_in_indv/an_reg[2]' (FDSE) to 'aud_in_indv/an_reg[3]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aud_in_indv/an_reg[3] )
-WARNING: [Synth 8-3332] Sequential element (aud_in_indv/an_reg[3]) is unused and will be removed from module Top_Student.
-WARNING: [Synth 8-3332] Sequential element (aud_in_indv/an_reg[0]) is unused and will be removed from module Top_Student.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (aud_in_indv/\an_reg[3] )
+WARNING: [Synth 8-3332] Sequential element (an_reg[3]) is unused and will be removed from module AudioInModule.
+WARNING: [Synth 8-3332] Sequential element (an_reg[0]) is unused and will be removed from module AudioInModule.
+WARNING: [Synth 8-3332] Sequential element (Mouse/zpos_reg[3]) is unused and will be removed from module mouse_disp_indv.
+WARNING: [Synth 8-3332] Sequential element (Mouse/zpos_reg[2]) is unused and will be removed from module mouse_disp_indv.
+WARNING: [Synth 8-3332] Sequential element (Mouse/zpos_reg[1]) is unused and will be removed from module mouse_disp_indv.
+WARNING: [Synth 8-3332] Sequential element (Mouse/zpos_reg[0]) is unused and will be removed from module mouse_disp_indv.
+WARNING: [Synth 8-3332] Sequential element (Mouse/left_down_reg) is unused and will be removed from module mouse_disp_indv.
+WARNING: [Synth 8-3332] Sequential element (Mouse/left_reg) is unused and will be removed from module mouse_disp_indv.
+WARNING: [Synth 8-3332] Sequential element (Mouse/middle_down_reg) is unused and will be removed from module mouse_disp_indv.
+WARNING: [Synth 8-3332] Sequential element (Mouse/middle_reg) is unused and will be removed from module mouse_disp_indv.
+WARNING: [Synth 8-3332] Sequential element (Mouse/right_down_reg) is unused and will be removed from module mouse_disp_indv.
+WARNING: [Synth 8-3332] Sequential element (Mouse/right_reg) is unused and will be removed from module mouse_disp_indv.
+WARNING: [Synth 8-3332] Sequential element (Mouse/new_event_reg) is unused and will be removed from module mouse_disp_indv.
+WARNING: [Synth 8-3332] Sequential element (Mouse/xpos_reg[0]) is unused and will be removed from module mouse_disp_indv.
+WARNING: [Synth 8-3332] Sequential element (Mouse/ypos_reg[0]) is unused and will be removed from module mouse_disp_indv.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 735.102 ; gain = 492.703
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 1649.246 ; gain = 496.000 ; free physical = 1318 ; free virtual = 9301
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -468,13 +751,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 735.102 ; gain = 492.703
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 1649.246 ; gain = 496.000 ; free physical = 1169 ; free virtual = 9171
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 754.879 ; gain = 512.480
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 1649.246 ; gain = 496.000 ; free physical = 1158 ; free virtual = 9161
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -485,8 +768,32 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/x_max_reg[11]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/x_max_reg[10]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/x_max_reg[9]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/x_max_reg[8]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/x_max_reg[7]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/x_max_reg[6]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/x_max_reg[5]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/x_max_reg[4]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/x_max_reg[3]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/x_max_reg[2]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/x_max_reg[1]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/x_max_reg[0]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/y_max_reg[11]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/y_max_reg[10]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/y_max_reg[9]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/y_max_reg[8]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/y_max_reg[7]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/y_max_reg[6]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/y_max_reg[5]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/y_max_reg[4]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/y_max_reg[3]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/y_max_reg[2]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/y_max_reg[1]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (nolabel_line29/Mouse/y_max_reg[0]) is unused and will be removed from module Top_Student.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 790.289 ; gain = 547.891
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 1649.246 ; gain = 496.000 ; free physical = 1174 ; free virtual = 9157
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -506,11 +813,13 @@ Finished Flattening Before IO Insertion
 ---------------------------------------------------------------------------------
 Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5365] Flop nolabel_line29/Mouse/Inst_Ps2Interface/ps2_clk_h_reg is being inverted and renamed to nolabel_line29/Mouse/Inst_Ps2Interface/ps2_clk_h_reg_inv.
+INFO: [Synth 8-5365] Flop nolabel_line29/Mouse/Inst_Ps2Interface/ps2_data_h_reg is being inverted and renamed to nolabel_line29/Mouse/Inst_Ps2Interface/ps2_data_h_reg_inv.
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 790.289 ; gain = 547.891
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1649.246 ; gain = 496.000 ; free physical = 1173 ; free virtual = 9158
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -523,7 +832,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 790.289 ; gain = 547.891
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1649.246 ; gain = 496.000 ; free physical = 1173 ; free virtual = 9158
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -535,25 +844,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 790.289 ; gain = 547.891
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1649.246 ; gain = 496.000 ; free physical = 1172 ; free virtual = 9157
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 790.289 ; gain = 547.891
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1649.246 ; gain = 496.000 ; free physical = 1172 ; free virtual = 9157
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 790.289 ; gain = 547.891
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1649.246 ; gain = 496.000 ; free physical = 1172 ; free virtual = 9157
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 790.289 ; gain = 547.891
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1649.246 ; gain = 496.000 ; free physical = 1172 ; free virtual = 9157
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -584,67 +893,77 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     4|
-|2     |CARRY4 |   168|
-|3     |LUT1   |    25|
-|4     |LUT2   |   181|
-|5     |LUT3   |   196|
-|6     |LUT4   |   130|
-|7     |LUT5   |   171|
-|8     |LUT6   |   309|
-|9     |MUXF7  |     1|
+|1     |BUFG   |     5|
+|2     |CARRY4 |   236|
+|3     |LUT1   |    61|
+|4     |LUT2   |   352|
+|5     |LUT3   |   338|
+|6     |LUT4   |   240|
+|7     |LUT5   |   291|
+|8     |LUT6   |   475|
+|9     |MUXF7  |     2|
 |10    |SRL16E |     2|
-|11    |FDRE   |   445|
-|12    |FDRE_1 |    31|
-|13    |FDSE   |     3|
-|14    |FDSE_1 |     1|
-|15    |IBUF   |     9|
-|16    |OBUF   |    33|
+|11    |FDE_1  |    32|
+|12    |FDRE   |   799|
+|13    |FDRE_1 |    31|
+|14    |FDSE   |     3|
+|15    |FDSE_1 |     1|
+|16    |IBUF   |     9|
+|17    |IOBUF  |     2|
+|18    |OBUF   |    40|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+------------------+-----------------+------+
-|      |Instance          |Module           |Cells |
-+------+------------------+-----------------+------+
-|1     |top               |                 |  1709|
-|2     |  aud_in_indv     |AudioInModule    |   299|
-|3     |    clk20kHz      |clk_4            |    55|
-|4     |    my_audio_unit |Audio_Input      |   157|
-|5     |  aud_out_indv    |AudioOutModule   |   436|
-|6     |    aud           |Audio_Output     |    68|
-|7     |    clk20k        |clk_0            |    54|
-|8     |    clk2f         |clk_1            |    54|
-|9     |    clk50M        |clk_2            |    54|
-|10    |    clkf          |clk_3            |    54|
-|11    |    moduleButtonC |buttonModule     |    77|
-|12    |      debouncer   |dbModule         |    74|
-|13    |    ringer        |ringerModule     |    73|
-|14    |  oled_dig_indv   |OledDigitsModule |   892|
-|15    |    clk625        |clk              |    55|
-|16    |    od0           |Oled_Display     |   834|
-+------+------------------+-----------------+------+
++------+------------------------+-----------------+------+
+|      |Instance                |Module           |Cells |
++------+------------------------+-----------------+------+
+|1     |top                     |                 |  2919|
+|2     |  aud_in_indv           |AudioInModule    |   299|
+|3     |    clk20kHz            |clk_5            |    55|
+|4     |    my_audio_unit       |Audio_Input      |   160|
+|5     |  aud_out_indv          |AudioOutModule   |   436|
+|6     |    aud                 |Audio_Output     |    68|
+|7     |    clk20k              |clk_1            |    54|
+|8     |    clk2f               |clk_2            |    54|
+|9     |    clk50M              |clk_3            |    54|
+|10    |    clkf                |clk_4            |    54|
+|11    |    moduleButtonC       |buttonModule     |    77|
+|12    |      debouncer         |dbModule         |    74|
+|13    |    ringer              |ringerModule     |    73|
+|14    |  nolabel_line29        |mouse_disp_indv  |  1187|
+|15    |    Mouse               |MouseCtl         |   734|
+|16    |      Inst_Ps2Interface |Ps2Interface     |   281|
+|17    |    OLED                |Oled_Display_0   |   404|
+|18    |    Oled_clock          |SixTwoFive_CLOCK |    13|
+|19    |    xy_conv             |convertXY        |    35|
+|20    |  oled_dig_indv         |OledDigitsModule |   892|
+|21    |    clk625              |clk              |    55|
+|22    |    od0                 |Oled_Display     |   834|
++------+------------------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 790.289 ; gain = 547.891
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1649.246 ; gain = 496.000 ; free physical = 1172 ; free virtual = 9157
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 790.289 ; gain = 209.805
-Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 790.289 ; gain = 547.891
+Synthesis finished with 0 errors, 0 critical warnings and 43 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1649.246 ; gain = 129.648 ; free physical = 1227 ; free virtual = 9211
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1649.246 ; gain = 496.000 ; free physical = 1227 ; free virtual = 9211
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 210 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 313 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 32 instances were transformed.
+  A total of 66 instances were transformed.
+  FDE_1 => FDRE (inverted pins: C): 32 instances
   FDRE_1 => FDRE (inverted pins: C): 31 instances
   FDSE_1 => FDSE (inverted pins: C): 1 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-69 Infos, 36 Warnings, 4 Critical Warnings and 0 Errors encountered.
+170 Infos, 96 Warnings, 4 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 790.289 ; gain = 561.027
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 1676.262 ; gain = 523.016 ; free physical = 1236 ; free virtual = 9222
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'D:/MyWork/TeamInt/MouseAudioDisplay.runs/synth_1/Top_Student.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/mattliu/Desktop/MAD-2026/MouseAudioDisplay.runs/synth_1/Top_Student.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 790.289 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 22 16:48:59 2023...
+report_utilization: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1700.273 ; gain = 0.000 ; free physical = 1243 ; free virtual = 9226
+INFO: [Common 17-206] Exiting Vivado at Sat Mar 25 11:38:50 2023...
