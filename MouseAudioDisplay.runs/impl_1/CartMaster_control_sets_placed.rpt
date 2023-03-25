@@ -1,0 +1,87 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sun Mar 26 00:48:51 2023
+| Host         : EugeneZen5 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file CartMaster_control_sets_placed.rpt
+| Design       : CartMaster
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    19 |
+| Unused register locations in slices containing registers |    52 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            1 |
+|      6 |            2 |
+|     10 |            1 |
+|     14 |            5 |
+|    16+ |           10 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             156 |           31 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             204 |           35 |
+| Yes          | No                    | No                     |              86 |           18 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             118 |           16 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------------+-----------------------------------+-------------------------------+------------------+----------------+
+|               Clock Signal              |           Enable Signal           |        Set/Reset Signal       | Slice Load Count | Bel Load Count |
++-----------------------------------------+-----------------------------------+-------------------------------+------------------+----------------+
+| ~oledClk_BUFG                           |                                   |                               |                1 |              2 |
+|  digit_count/clk/CLK                    |                                   |                               |                2 |              6 |
+|  clk_1hz_BUFG                           |                                   |                               |                2 |              6 |
+|  clock_IBUF_BUFG                        |                                   | clk/counter_625mhz[4]_i_1_n_0 |                1 |             10 |
+|  digit_count/cnt/seg_inferred__0/i__n_0 |                                   |                               |                2 |             14 |
+|  clk_1hz_BUFG                           | coin/coin_pos_x[6]_i_1_n_0        |                               |                4 |             14 |
+|  clk_1hz_BUFG                           | coin/coin_pos_x[6]_i_1_n_0        | coin/coin_pos_y[6]_i_1_n_0    |                3 |             14 |
+|  KHz/CLK                                | car_pos/db_btnL/D1/E[0]           |                               |                3 |             14 |
+|  KHz/CLK                                | car_pos/db_btnR/D1/E[0]           |                               |                3 |             14 |
+|  digit_count/clk/CLK                    | digit_count/disp_digit[3]_i_1_n_0 |                               |                4 |             16 |
+|  clk_1hz_BUFG                           |                                   | blks/block_pos_y[8]_i_1_n_0   |                4 |             18 |
+|  KHz/CLK                                |                                   |                               |                5 |             24 |
+|  clk_1hz_BUFG                           | coin/points_reg[13]               |                               |                4 |             28 |
+| ~oledClk_BUFG                           |                                   | btnC_IBUF                     |                6 |             34 |
+| ~oledClk_BUFG                           | od0/delay[0]_i_1_n_0              | btnC_IBUF                     |                5 |             40 |
+|  clock_IBUF_BUFG                        |                                   | clk/clear                     |                7 |             52 |
+| ~oledClk_BUFG                           | od0/state                         | btnC_IBUF                     |                8 |             64 |
+| ~oledClk_BUFG                           |                                   | od0/spi_word[39]_i_1_n_0      |               17 |             90 |
+|  clock_IBUF_BUFG                        |                                   |                               |               19 |            104 |
++-----------------------------------------+-----------------------------------+-------------------------------+------------------+----------------+
+
+
