@@ -30,8 +30,10 @@ module CartMaster(
     input btnR,
     input btnU,
     input btnD,
-    output cs,sdin,sclk,d_cn,resn,vccen,pmoden   
+    output cs,sdin,sclk,d_cn,resn,vccen,pmoden,
+    input flag
     );
+    wire enable;
     wire frame_begin,sending_pixels,sample_pixel;
     wire [12:0] pixel_index;
     reg [15:0] oled_data; 
@@ -50,6 +52,7 @@ module CartMaster(
     wire [6:0] segment;
     wire [2:0] rand;
     reg [25:0] counter;
+    wire [6:0] seg_init;
 
     clocks clk(.CLOCK(clock),.clk_625mhz(oledClk),.clk_1hz(clk_1hz),.counter(counter));
     Oled_Display od0 (oledClk, btnC ,frame_begin, 
@@ -58,7 +61,7 @@ module CartMaster(
     blocks_display blks(.CLOCK(clock),.clk_1hz(clk_1hz),.block_pos_x(pos_x),.block_pos_y(pos_y));
     displayOLED disp(.CLOCK(clock),.pixel_index(pixel_index),.block_pos_x(pos_x),.block_pos_y(pos_y),.oled_data(draw_oled),.car_x(car_x),.car_y(car_y),.coin_x(coin_x),.coin_y(coin_y));
     ThousandHz KHz(.CLOCK(clock),.new_clock(clk_1khz)); //for debouncer
-    car_position car_pos (.ThousandHz(clk_1khz),.btnL(btnL),.btnR(btnR),.btnU(btnU),.btnD(btnD),.car_x(car_x),.car_y(car_y));
+    car_position car_pos (.ThousandHz(clk_1khz),.btnL(btnL),.btnR(btnR),.btnU(btnU),.btnD(btnD),.car_x(car_x),.car_y(car_y),.enable(enable));
     coins coin (.CLOCK(clock),.clk_1hz(clk_1hz),.rand(rand),.coin_pos_x(coin_x),.coin_pos_y(coin_y));
     digits_counter digit_count (.CLOCK(clock),.digits(points),.anode(anode),.segment(segment));
     points_counter pts_cnt (.CLOCK(clock),.clk_1hz(clk_1hz),.car_x(car_x),.car_y(car_y),.coin_x(coin_x),.coin_y(coin_y),.points(points));
@@ -73,7 +76,7 @@ module CartMaster(
             counter = 24_999_99; //2hz
         end
     end
-    assign seg = segment;
-    assign an = anode;
+    assign seg = enable ? segment : 7'b1111111;
+    assign an = enable ? anode : 4'b1111;
     
 endmodule
