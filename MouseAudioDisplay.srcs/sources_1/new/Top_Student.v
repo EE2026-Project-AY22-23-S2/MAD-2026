@@ -23,10 +23,10 @@ module Top_Student (input clock, sw0, btnC, output D1, D2, CLK_OUT, nSync,
     wire [6:0] seg_wire;
     wire [3:0] an_wire;
                     
-    AudioOutModule aud_out_indv (clock, sw0, btnC, D1, D2, CLK_OUT, nSync);
-    AudioInModule aud_in_indv (clock, J_MIC_Pin3, J_MIC_Pin1, J_MIC_Pin4, led_wire, seg_wire, an_wire);
-    OledDigitsModule oled_dig_indv (clock, reset, sw, sw4, sw5, sw6, cs, sdin, sclk, d_cn, resn, vccen, pmoden);
-    mouse_disp_indv(clock, cs1, sdin1, sclk1, d_cn1, resn1, vccen1, pmoden1, PS2Clk, PS2Data);
+//    AudioOutModule aud_out_indv (clock, sw0, btnC, D1, D2, CLK_OUT, nSync);
+//    AudioInModule aud_in_indv (clock, J_MIC_Pin3, J_MIC_Pin1, J_MIC_Pin4, led_wire, seg_wire, an_wire);
+//    OledDigitsModule oled_dig_indv (clock, reset, sw, sw4, sw5, sw6, cs, sdin, sclk, d_cn, resn, vccen, pmoden);
+//    mouse_disp_indv(clock, cs1, sdin1, sclk1, d_cn1, resn1, vccen1, pmoden1, PS2Clk, PS2Data);
     
     assign led = led_wire;
     assign seg = seg_wire;

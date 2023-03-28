@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 01.03.2023 15:59:43
+// Create Date: 19.03.2023 20:38:52
 // Design Name: 
-// Module Name: SixTwoFive_CLOCK
+// Module Name: mouseDisplay
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,17 +20,19 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module SixTwoFive_CLOCK(
+module mouseDisplay(
     input clock,
-    output out
+    input [6:0] x_val, y_val,
+    input [6:0] conv_x, 
+    input [5:0] conv_y,
+    output reg [15:0] oled_data = 0
     );
-    reg [4:0] count = 0; //6.25MHz
-    reg C0 = 0;
-
-     
-    always @ (posedge clock) begin  
-        count <= (count == 15) ? 0 : count + 1;
-        C0 <= (count == 0) ? ~C0 : C0;
+    always @(posedge clock) begin
+        if (((x_val >= conv_x - 1)&&(x_val <= conv_x + 1))  && ((y_val >= conv_y-1) && (y_val <= conv_y + 1))) begin
+            oled_data <= 16'hFFFF;
+        end
+        else begin
+            oled_data = 16'h0;
+        end;
     end
-    assign out = C0;
 endmodule

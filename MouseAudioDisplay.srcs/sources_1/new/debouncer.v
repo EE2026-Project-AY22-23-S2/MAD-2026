@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 03/08/2023 03:54:14 PM
+// Create Date: 14.03.2023 20:30:52
 // Design Name: 
-// Module Name: debounce
+// Module Name: debouncer
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,8 +20,16 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module debounce(
-    input btnC,
-    output isPressed
+module debouncer(
+    input button, CLOCK,
+    output button_output
     );
+    //Use 1000Hz Clock input 
+    reg first_out = 0, second_out = 0;
+    assign button_output = first_out && second_out;
+    always @(posedge CLOCK) begin
+        first_out <= button; //1 D-FF
+        second_out <= first_out; //2nd D-FF
+    end
+
 endmodule

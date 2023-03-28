@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 08.03.2023 14:47:23
+// Create Date: 15.03.2023 23:30:45
 // Design Name: 
-// Module Name: four
+// Module Name: segment_display
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,35 +20,27 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module oled_digit_4(
+module segment_display(
     input CLOCK,
-    input sw,
     input [12:0] pixel_index,
     output reg [15:0] oled_data
     );
     wire [6:0] x; //from 0 to 95
     wire [5:0] y;
+    wire [15:0] blocks;
+    
+    
     assign x = pixel_index%96;
     assign y = pixel_index/96;
     always @(CLOCK) begin
-        if ((x >= 58) && (x <= 60) && (y >= 0) && (y < 59) && sw) begin
-            oled_data <= 16'h07E0;
-        end
-        else if ((x > 0) && (x <= 60) && (y >= 58) && (y <= 60) && sw) begin
-            oled_data <= 16'h07E0;
-        end
-        else if ((x > 10) && (x < 14) && (y > 10) && (y < 34)) begin
+        if ((y == 10 || y == 15 || y == 30 || y == 35 || y == 50 || y == 55) && x >= 10 && x <= 35) begin
             oled_data <= 16'b1111111111111111;
         end
-        else if ((x > 30) && (x < 34) && (y > 10) && (y < 50)) begin
+        else if ( (x == 10 || x == 15 || x == 30 || x == 35) && (y >= 10 && y <= 55) ) begin
             oled_data <= 16'b1111111111111111;
         end
-        else if ((x > 13) && (x < 30) && (y > 30) && (y < 34)) begin
-            oled_data <= 16'b1111111111111111;
-        end                
         else begin
             oled_data <= 16'h0000;
-        end
+        end             
     end
-
 endmodule
