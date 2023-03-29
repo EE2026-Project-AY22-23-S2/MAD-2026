@@ -23,7 +23,8 @@
 module menu_display(
     input clock,
     input btnC,
-    output cs, sdin, sclk, d_cn, resn, vccen, pmoden,
+    input [12:0] pixel_index, 
+    output reg [15:0] oled_data,
     output reg [3:0] state
 
     );
@@ -44,17 +45,18 @@ module menu_display(
         state <= 0;
     end
     wire frame_begin,sending_pixels,sample_pixel;
-    wire [12:0] pixel_index;
-    reg [15:0] oled_data; 
+
     wire oledClk;
     wire clk_1hz;
+    wire btnCdb;
+    wire ThousandHz;
  
     clocks clk(.CLOCK(clock),.clk_625mhz(oledClk));
-    Oled_Display od0 (oledClk, btnC ,frame_begin, 
-                    sending_pixels, sample_pixel, pixel_index, oled_data, 
-                    cs, sdin, sclk, d_cn, resn, vccen, pmoden);
-    
-    reg [15:0] img [0:6143];
+    debouncer_button dbM_btnC (btnC,ThousandHz,btnCdb); 
+    ThousandHz thz (clock,ThousandHz);
+    always @(posedge btnCdb) begin
+        state <= state + 1;
+    end
     
     always @(posedge clock) begin
         if (state == 0) begin    

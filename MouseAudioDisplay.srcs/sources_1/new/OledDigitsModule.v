@@ -24,11 +24,9 @@ module OledDigitsModule(
     input CLOCK,
     input reset,
     input sw,sw4,sw5,sw6,
-    output cs, sdin, sclk, d_cn, resn, vccen, pmoden
+    input [12:0] pixel_index,
+    output reg [15:0] oled_data
     );
-    wire frame_begin, sending_pixels, sample_pixel;
-    wire [12:0] pixel_index;
-    reg [15:0] oled_data;
     wire [15:0] four_disp;
     wire [15:0] zero_disp;
     wire [15:0] five_disp;
@@ -43,9 +41,6 @@ module OledDigitsModule(
     oled_digit_4 Four (CLOCK,sw,pixel_index,four_disp); 
     oled_digit_5 Five (CLOCK,sw,pixel_index,five_disp);
     oled_digit_6 Six (CLOCK,sw,pixel_index,six_disp);
-    Oled_Display od0 (oledClk, reset,frame_begin, 
-            sending_pixels, sample_pixel, pixel_index, oled_data, 
-            cs, sdin, sclk, d_cn, resn, vccen, pmoden);
     always @(CLOCK) begin
         if(sw4) begin
             oled_data <= four_disp;

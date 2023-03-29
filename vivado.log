@@ -2,10 +2,10 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue Mar 28 14:50:20 2023
-# Process ID: 11920
+# Start of session at: Tue Mar 28 16:09:50 2023
+# Process ID: 17432
 # Current directory: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12860 C:\Users\eugen\OneDrive - National University of Singapore\Y2S2\EE2026\Project\MAD-2026\MouseAudioDisplay.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12344 C:\Users\eugen\OneDrive - National University of Singapore\Y2S2\EE2026\Project\MAD-2026\MouseAudioDisplay.xpr
 # Log file: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/vivado.log
 # Journal file: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026\vivado.jou
 #-----------------------------------------------------------
@@ -21,93 +21,21 @@ INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/dat
 update_compile_order -fileset sources_1
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Tue Mar 28 14:50:32 2023] Launched synth_1...
+[Tue Mar 28 16:10:11 2023] Launched synth_1...
 Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/synth_1/runme.log
-[Tue Mar 28 14:50:32 2023] Launched impl_1...
+[Tue Mar 28 16:10:11 2023] Launched impl_1...
 Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/impl_1/runme.log
-set_property is_global_include true [get_files  {{C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/Top_Student.v}}]
-set_property is_global_include false [get_files  {{C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.srcs/sources_1/new/Top_Student.v}}]
-set_property top Top_Student [current_fileset]
-update_compile_order -fileset sources_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
+[Tue Mar 28 16:22:06 2023] Launched impl_1...
+Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Tue Mar 28 14:51:59 2023] Launched synth_1...
+[Tue Mar 28 16:22:30 2023] Launched synth_1...
 Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/synth_1/runme.log
-[Tue Mar 28 14:51:59 2023] Launched impl_1...
+[Tue Mar 28 16:22:30 2023] Launched impl_1...
 Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Tue Mar 28 14:53:57 2023] Launched synth_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/synth_1/runme.log
-[Tue Mar 28 14:53:57 2023] Launched impl_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Tue Mar 28 14:54:15 2023] Launched synth_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/synth_1/runme.log
-[Tue Mar 28 14:54:15 2023] Launched impl_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Tue Mar 28 14:59:52 2023] Launched synth_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/synth_1/runme.log
-[Tue Mar 28 14:59:52 2023] Launched impl_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Tue Mar 28 15:01:13 2023] Launched synth_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/synth_1/runme.log
-[Tue Mar 28 15:01:13 2023] Launched impl_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Tue Mar 28 15:28:08 2023] Launched synth_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/synth_1/runme.log
-[Tue Mar 28 15:28:08 2023] Launched impl_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Tue Mar 28 15:29:41 2023] Launched synth_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/synth_1/runme.log
-[Tue Mar 28 15:29:41 2023] Launched impl_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Tue Mar 28 15:32:45 2023] Launched synth_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/synth_1/runme.log
-[Tue Mar 28 15:32:45 2023] Launched impl_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Tue Mar 28 15:33:18 2023] Launched synth_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/synth_1/runme.log
-[Tue Mar 28 15:33:18 2023] Launched impl_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Tue Mar 28 15:33:49 2023] Launched synth_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/synth_1/runme.log
-[Tue Mar 28 15:33:49 2023] Launched impl_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Tue Mar 28 15:34:09 2023] Launched synth_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/synth_1/runme.log
-[Tue Mar 28 15:34:09 2023] Launched impl_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Tue Mar 28 15:36:31 2023] Launched synth_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/synth_1/runme.log
-[Tue Mar 28 15:36:31 2023] Launched impl_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Tue Mar 28 15:38:42 2023] Launched synth_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/synth_1/runme.log
-[Tue Mar 28 15:38:42 2023] Launched impl_1...
-Run output will be captured here: C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/impl_1/runme.log
-ERROR: [Vivado 12-106] *** Exception: java.lang.IllegalArgumentException: Comparison method violates its general contract! (See C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/vivado_pid11920.debug)
-ERROR: [Vivado 12-106] *** Exception: java.lang.IllegalArgumentException: Comparison method violates its general contract! (See C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/vivado_pid11920.debug)
 exit
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 28 15:40:50 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 28 16:30:20 2023...

@@ -65,16 +65,10 @@ set_property src_info {type:XDC file:1 line:119 export:INPUT save:INPUT read:REA
 set_property PACKAGE_PIN U17 [get_ports btnD]
 set_property src_info {type:XDC file:1 line:126 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN J1 [get_ports {nSync}]
-set_property src_info {type:XDC file:1 line:128 export:INPUT save:INPUT read:READ} [current_design]
-Sch name = JA2
 set_property src_info {type:XDC file:1 line:129 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN L2 [get_ports {D1}]
-set_property src_info {type:XDC file:1 line:131 export:INPUT save:INPUT read:READ} [current_design]
-Sch name = JA3
 set_property src_info {type:XDC file:1 line:132 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN J2 [get_ports {D2}]
-set_property src_info {type:XDC file:1 line:134 export:INPUT save:INPUT read:READ} [current_design]
-Sch name = JA4
 set_property src_info {type:XDC file:1 line:135 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN G2 [get_ports {CLK_OUT}]
 set_property src_info {type:XDC file:1 line:154 export:INPUT save:INPUT read:READ} [current_design]
