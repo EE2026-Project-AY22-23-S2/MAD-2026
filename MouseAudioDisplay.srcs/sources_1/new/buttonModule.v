@@ -20,30 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module buttonModule(input clock, input btn, output Button);
-    wire dbState;
-    reg dbCommand = 0;
-    reg btnState = 0;
-    
-    always @ (posedge clock) begin
-        if (btnState == 0) begin
-            if (btn == 0) begin
-                btnState <= 0;
-            end else begin//btn == 0
-                dbCommand <= dbState ? 0 : 1;
-                btnState <= dbState ? 0 : 1;
-            end
-        end else begin//btnState == 1
-            if (btn == 0) begin
-                dbCommand <= dbState ? 0 : 1;
-                btnState <= dbState ? 1 : 0;
-            end else //btn == 1
-                btnState <= 1;
-        end
-    end
-    
-    dbModule debouncer (clock, dbCommand, dbState);
-    
-    assign Button = btnState;
-    
+module buttonModule(input clk, input btn, output Button);
+    wire Q0,Q1,Q2,Q3;
+    DFF D0 (clk,btn,Q0);
+    DFF D1 (clk,Q0,Q1);
+    DFF D2 (clk,Q1,Q2);
+    assign Button = Q1 & (~Q2);
 endmodule

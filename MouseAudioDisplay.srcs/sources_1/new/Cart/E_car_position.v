@@ -27,7 +27,8 @@ module car_position(
     input btnU,
     input btnD,
     output reg [6:0] car_x,
-    output reg [6:0] car_y
+    output reg [6:0] car_y,
+    input [3:0] flag
     );
     initial begin
         car_x <= 45; //middle of screen (left of car)
@@ -42,42 +43,49 @@ module car_position(
     debouncer_button db_btnU (btnU,ThousandHz,btnUdb);
     debouncer_button db_btnD (btnD,ThousandHz,btnDdb);        
     always @(posedge ThousandHz) begin
-        if(btnLdb) begin
-            if (car_x > 14) begin
-                car_x = car_x - 1;
-            end
-            else begin
-                car_x = car_x;
-            end
+        if(flag != 2) begin
+            car_x <= 45;
+            car_y <= 51;
         end
-        else if (btnRdb) begin
-            if (car_x < 72) begin
-                car_x = car_x + 1;
+        else begin
+            if(btnLdb) begin
+                if (car_x > 14) begin
+                    car_x = car_x - 1;
+                end
+                else begin
+                    car_x = car_x;
+                end
             end
-            else begin
-                car_x = car_x;
+            else if (btnRdb) begin
+                if (car_x < 72) begin
+                    car_x = car_x + 1;
+                end
+                else begin
+                    car_x = car_x;
+                end
+            end 
+            else if (btnUdb) begin
+                if (car_y > 5) begin
+                    car_y = car_y - 1;
+                end 
+                else begin
+                    car_y = car_y;
+                end
             end
-        end 
-        else if (btnUdb) begin
-            if (car_y > 5) begin
-                car_y = car_y - 1;
+            else if (btnDdb) begin
+                if (car_y < 55) begin
+                    car_y = car_y + 1;
+                end
+                else begin
+                    car_y = car_y;
+                end
             end 
             else begin
+                car_x = car_x;
                 car_y = car_y;
-            end
+            end      
         end
-        else if (btnDdb) begin
-            if (car_y < 55) begin
-                car_y = car_y + 1;
-            end
-            else begin
-                car_y = car_y;
-            end
-        end 
-        else begin
-            car_x = car_x;
-            car_y = car_y;
-        end      
     end
+
     
 endmodule

@@ -1,9 +1,0 @@
-0.6
-2018.2
-Jun 14 2018
-20:41:02
-D:/MyWork/MouseAudioDisplay/MouseAudioDisplay.sim/sim_1/behav/xsim/glbl.v,1678081566,verilog,,,,glbl,,,,,,,,
-D:/MyWork/MouseAudioDisplay/MouseAudioDisplay.srcs/sim_1/new/clk_sim.v,1678083007,verilog,,,,clk_sim,,,,,,,,
-D:/MyWork/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/c20k.v,1678082799,verilog,,D:/MyWork/MouseAudioDisplay/MouseAudioDisplay.srcs/sim_1/new/clk_sim.v,,c20k,,,,,,,,
-D:/MyWork/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/c50M.v,1678082944,verilog,,D:/MyWork/MouseAudioDisplay/MouseAudioDisplay.srcs/sim_1/new/clk_sim.v,,c50M,,,,,,,,
-D:/MyWork/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/clk.v,1678081569,verilog,,D:/MyWork/MouseAudioDisplay/MouseAudioDisplay.srcs/sim_1/new/clk_sim.v,,clk,,,,,,,,

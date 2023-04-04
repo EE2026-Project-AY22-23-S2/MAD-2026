@@ -1,0 +1,184 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Fri Mar 31 19:04:23 2023
+| Host         : EangXPS running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
+| Design       : Top_Student
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |   113 |
+| Unused register locations in slices containing registers |   242 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            3 |
+|      4 |            5 |
+|      6 |            3 |
+|      8 |           14 |
+|     10 |            5 |
+|     12 |            2 |
+|     14 |            7 |
+|    16+ |           74 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            9178 |         1743 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |            2110 |          309 |
+| Yes          | No                    | No                     |             610 |          107 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             284 |           50 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------------------+------------------------------------------------------+------------------------------------------------------+------------------+----------------+
+|                     Clock Signal                     |                     Enable Signal                    |                   Set/Reset Signal                   | Slice Load Count | Bel Load Count |
++------------------------------------------------------+------------------------------------------------------+------------------------------------------------------+------------------+----------------+
+|  clock_50MHz/clk50M                                  |                                                      |                                                      |                1 |              2 |
+|  indv/nolabel_line51/debounce_middleClk              |                                                      |                                                      |                1 |              2 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | sw_IBUF[0]                                           |                1 |              2 |
+|  indv/nolabel_line56/Oled_clock/oled_clock_out       |                                                      |                                                      |                1 |              4 |
+|  nolabel_line116/debounce_clk/new_clock              |                                                      |                                                      |                1 |              4 |
+|  team/clock/oled_data_reg[15]                        |                                                      |                                                      |                2 |              4 |
+|  team/sgr/seg_clock/stg_reg[1]                       |                                                      |                                                      |                1 |              4 |
+|  d/sg_display/count100k/clock_100k/my_counter_reg[1] |                                                      |                                                      |                1 |              4 |
+|  clock_1kHz/clk1k                                    |                                                      |                                                      |                2 |              6 |
+|  cartMaster/digit_count/clk/CLK                      |                                                      |                                                      |                1 |              6 |
+|  clk_1hz                                             |                                                      |                                                      |                1 |              6 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | Mouse/Inst_Ps2Interface/data_inter0                  |                1 |              8 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | Mouse/Inst_Ps2Interface/clk_inter0                   |                1 |              8 |
+|  CLK_OUT_OBUF_BUFG                                   | aud/FSM_onehot_current_state_reg_n_0_[1]             |                                                      |                4 |              8 |
+|  indv/mouseClk/new_clock                             |                                                      |                                                      |                3 |              8 |
+|  CLK_OUT_OBUF_BUFG                                   |                                                      |                                                      |                2 |              8 |
+|  CLOCK_IBUF_BUFG                                     | an[3]_i_1__2_n_0                                     |                                                      |                2 |              8 |
+|  CLOCK_IBUF_BUFG                                     | my_audio_unit/seg_reg[0]                             | indv/aud_in_indv/seg[5]_i_1_n_0                      |                2 |              8 |
+|  CLOCK_IBUF_BUFG                                     | led[15]_i_1_n_0                                      | clapper/led_reg[14]_0                                |                3 |              8 |
+|  CLOCK_IBUF_BUFG                                     | dbM_btnC/D1/SR[0]                                    |                                                      |                2 |              8 |
+|  CLOCK_IBUF_BUFG                                     | Mouse/Inst_Ps2Interface/shift_frame                  | Mouse/Inst_Ps2Interface/reset_bit_count              |                2 |              8 |
+|  CLOCK_IBUF_BUFG                                     | team/clickHandler/E[0]                               | team/sgr/timing[3]_i_1_n_0                           |                1 |              8 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | nolabel_line129/img_outline/disp[15]_i_1_n_0         |                1 |              8 |
+|  dbM_btnC/D1/btnCdb                                  | p_1_in                                               | p_0_in                                               |                1 |              8 |
+|  seg_clk                                             |                                                      | nolabel_line129/nolabel_line81/seg[6]_i_1__2_n_0     |                3 |              8 |
+|  oled_clk                                            | db_btnD/D1/E[0]                                      | nolabel_line129/y_offset[4]_i_1_n_0                  |                2 |             10 |
+|  oledClk_BUFG                                        | nolabel_line116/xy_conv/E[0]                         | nolabel_line116/xy_conv/oled_data_reg[15]_10[0]      |                1 |             10 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | nolabel_line129/img_blur/blue_reg_n_0_[5]            |                1 |             10 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | team/clock/counter_625mhz[4]_i_1_n_0                 |                1 |             10 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | nolabel_line129/img_blur/final_red0_n_0              |                2 |             10 |
+|  oled_clk                                            | db_btnR/D1/E[0]                                      | nolabel_line129/x_offset[5]_i_1_n_0                  |                3 |             12 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | nolabel_line129/img_blur/final_green[5]_i_1_n_0      |                4 |             12 |
+|  CLOCK_IBUF_BUFG                                     | Mouse/Inst_Ps2Interface/delay_63clk_count[6]_i_2_n_0 | Mouse/Inst_Ps2Interface/delay_63clk_count[6]_i_1_n_0 |                2 |             14 |
+|  cartMaster/digit_count/cnt/seg_inferred__0/i__n_0   |                                                      |                                                      |                3 |             14 |
+|  CLOCK_IBUF_BUFG                                     | Mouse/Inst_Ps2Interface/right_down_reg               |                                                      |                2 |             14 |
+|  cartMaster/KHz/CLK                                  | cartMaster/car_pos/db_btnL/D2/E[0]                   | cartMaster/car_pos/clear                             |                3 |             14 |
+|  cartMaster/KHz/CLK                                  | cartMaster/car_pos/db_btnR/D1/E[0]                   | cartMaster/car_pos/clear                             |                4 |             14 |
+|  clk_1hz                                             | cartMaster/pts_cnt/coin_pos_y_reg[6]                 |                                                      |                3 |             14 |
+|  clk_1hz                                             | cartMaster/pts_cnt/coin_pos_y_reg[6]                 | cartMaster/coin/coin_pos_y[6]_i_1_n_0                |                3 |             14 |
+|  cartMaster/digit_count/clk/CLK                      | cartMaster/digit_count/disp_digit[3]_i_1_n_0         |                                                      |                5 |             16 |
+|  CLOCK_IBUF_BUFG                                     | Mouse/Inst_Ps2Interface/x_inc_reg[0]                 |                                                      |                1 |             16 |
+|  CLOCK_IBUF_BUFG                                     | Mouse/Inst_Ps2Interface/y_inc_reg[0]                 |                                                      |                3 |             16 |
+|  CLOCK_IBUF_BUFG                                     | Mouse/Inst_Ps2Interface/load_rx_data                 |                                                      |                1 |             16 |
+|  CLOCK_IBUF_BUFG                                     | Mouse/write_data                                     |                                                      |                3 |             16 |
+|  CLOCK_IBUF_BUFG                                     | seg[7]_i_1__0_n_0                                    |                                                      |                4 |             16 |
+|  oledClk_BUFG                                        |                                                      | nolabel_line116/xy_conv/SS[0]                        |                3 |             16 |
+|  v/clk20k                                            |                                                      |                                                      |                6 |             18 |
+|  clk_1hz                                             |                                                      | cartMaster/blks/clear                                |                4 |             18 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | team/sgr/timing[3]_i_1_n_0                           |                5 |             18 |
+|  CLOCK_IBUF_BUFG                                     | Mouse/Inst_Ps2Interface/frame[9]_i_1_n_0             |                                                      |                2 |             20 |
+|  CLOCK_IBUF_BUFG                                     | Mouse/Inst_Ps2Interface/delay_20us_count[10]_i_2_n_0 | Mouse/Inst_Ps2Interface/delay_20us_count[10]_i_1_n_0 |                3 |             22 |
+| ~my_audio_unit/J_MIC_Pin4_OBUF                       |                                                      |                                                      |                6 |             24 |
+|  l/clk20k                                            | d/l/SR[0]                                            |                                                      |                4 |             24 |
+|  clock_20kHz/J_MIC_Pin1_OBUF                         |                                                      |                                                      |                4 |             24 |
+|  s/clk20k                                            | d/s/clear                                            |                                                      |                7 |             24 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | nolabel_line129/img_outline/disp2                    |                3 |             24 |
+|  CLOCK_IBUF_BUFG                                     | Mouse/x_new_reg_n_0                                  |                                                      |                4 |             24 |
+|  CLOCK_IBUF_BUFG                                     | Mouse/y_new_reg_n_0                                  |                                                      |                3 |             24 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | clock_20kHz/J_MIC_Pin1_OBUF                          |                3 |             24 |
+|  CLOCK_IBUF_BUFG                                     | led[15]_i_1_n_0                                      |                                                      |                8 |             24 |
+|  CLK_OUT_OBUF_BUFG                                   | aud/temp2                                            |                                                      |                3 |             24 |
+|  team/debounce_clk/debounceClk                       |                                                      |                                                      |                6 |             24 |
+|  cartMaster/KHz/CLK                                  |                                                      |                                                      |                8 |             24 |
+|  l/clk20k                                            |                                                      |                                                      |                6 |             26 |
+|  s/clk20k                                            |                                                      |                                                      |                4 |             26 |
+|  clk_1hz                                             | cartMaster/coin/points_reg[13]                       |                                                      |                4 |             28 |
+|  CLOCK_IBUF_BUFG                                     | Mouse/Inst_Ps2Interface/delay_100us_count[0]_i_2_n_0 | Mouse/Inst_Ps2Interface/clear                        |                4 |             28 |
+|  CLOCK_IBUF_BUFG                                     | oled_data[15]_i_1__10_n_0                            |                                                      |               10 |             32 |
+|  v/clk20k                                            | d/v/clear                                            |                                                      |                7 |             34 |
+| ~oledClk_BUFG                                        | od1/delay[0]_i_1_n_0                                 |                                                      |                5 |             40 |
+| ~oledClk_BUFG                                        | od0/delay[0]_i_1__0_n_0                              |                                                      |                5 |             40 |
+|  CLK_OUT_OBUF_BUFG                                   | aud/FSM_onehot_current_state_reg_n_0_[1]             | aud/FSM_onehot_current_state_reg_n_0_[0]             |                8 |             44 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | Mouse/reset_timeout_cnt_reg_n_0                      |                6 |             48 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | cartMaster/clk/clear                                 |                7 |             52 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | Mouse/reset_periodic_check_cnt__0                    |                7 |             52 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | indv/aud_out_indv/clk2f/clear                        |                7 |             54 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | indv/aud_out_indv/clkf/clear                         |                7 |             54 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | indv/aud_out_indv/ringerCommand_reg_n_0              |               11 |             54 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | indv/nolabel_line56/Oled_clock/clear                 |                7 |             54 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | nolabel_line129/led_clock/clear                      |                7 |             54 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | nolabel_line129/oled_clock/clear                     |                7 |             54 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | nolabel_line129/segment_clock/clear                  |                7 |             54 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | team/sgr/seg_clock/clear                             |                7 |             54 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | team/sgr/sound_clock/clear                           |                7 |             54 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | team/sgr/beeperCommand_reg_n_0                       |                7 |             54 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | d/sg_display/count100k/clock_100k/clear              |                7 |             54 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | d/l/clock_20k/clear                                  |                7 |             54 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | d/s/clock_20k/clear                                  |                7 |             54 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | clock_50MHz/clear                                    |                7 |             54 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | unc1/clear                                           |                7 |             54 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | unc2/clear                                           |                7 |             54 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | clock_oled666/clear                                  |                7 |             54 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | unc0/clear                                           |                7 |             54 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | d/clock_10/clear                                     |                7 |             54 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | clock_20kHz/clear                                    |                7 |             54 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | clock_1kHz/clear                                     |                7 |             54 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | d/v/clock_20k/clear                                  |                7 |             54 |
+|  CLOCK_IBUF_BUFG                                     | unlock_counter                                       | unlock_counter[31]_i_1_n_0                           |                8 |             62 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | dbM_btnC/D1/SR[0]                                    |                8 |             62 |
+| ~oledClk_BUFG                                        | od0/FSM_onehot_state[31]_i_1__1_n_0                  |                                                      |                8 |             64 |
+| ~oledClk_BUFG                                        | od1/FSM_onehot_state[31]_i_1__0_n_0                  |                                                      |                9 |             64 |
+| ~oledClk_BUFG                                        |                                                      |                                                      |                9 |             72 |
+|  s/clk20k                                            |                                                      | d/s/clear                                            |               12 |             88 |
+|  l/clk20k                                            |                                                      | d/l/SR[0]                                            |               13 |             88 |
+|  v/clk20k                                            |                                                      | d/v/clear                                            |               13 |             88 |
+|  CLOCK_IBUF_BUFG                                     |                                                      | indv/aud_in_indv/peak_reg[0]_0                       |               15 |             88 |
+| ~oledClk_BUFG                                        |                                                      | od0/spi_word[39]_i_1__0_n_0                          |               16 |             90 |
+| ~oledClk_BUFG                                        |                                                      | od1/spi_word[39]_i_1_n_0                             |               21 |             90 |
+|  clkp2                                               |                                                      |                                                      |               23 |            100 |
+|  seg_clk                                             |                                                      |                                                      |               27 |            114 |
+|  CLOCK_IBUF_BUFG                                     |                                                      |                                                      |              157 |            724 |
+|  oled_clk                                            |                                                      |                                                      |              381 |           1574 |
+|  oledClk_BUFG                                        |                                                      |                                                      |             1086 |           6356 |
++------------------------------------------------------+------------------------------------------------------+------------------------------------------------------+------------------+----------------+
+
+

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/eugen/OneDrive - National University of Singapore/Y2S2/EE2026/Project/MAD-2026/MouseAudioDisplay.runs/synth_1'
+HD_PWD='C:/Users/eugen/Downloads/rush2.xpr/MouseAudioDisplay/MouseAudioDisplay.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log CartMaster.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source CartMaster.tcl
+EAStep vivado -log Top_Student.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Student.tcl

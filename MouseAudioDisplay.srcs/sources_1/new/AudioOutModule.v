@@ -20,9 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module AudioOutModule (input clock, sw0, btnC, output D1, D2, CLK_OUT, nSync);
-    wire [11:0] audio_out;
-    wire C20k, C50M, Cf, C2f, Cdb, NC, ringState, buttonC;
+module AudioOutModule (input clock, sw0, buttonC, output [11:0] audio_out);
+    wire C20k, C50M, Cf, C2f, Cdb, ringState;
     reg ringerCommand = 0;
     reg lastRing = 0;
 
@@ -47,11 +46,8 @@ module AudioOutModule (input clock, sw0, btnC, output D1, D2, CLK_OUT, nSync);
         end
     end
 
-    buttonModule moduleButtonC (clock, btnC, buttonC);
     ringerModule ringer (clock, ringerCommand, ringState);
     
     assign audio_out = ringState ? (sw0 ? (Cf ? 12'hFFF : 0) : (C2f ? 12'h800 : 0)) : 0;
-    
-    Audio_Output aud (.CLK(C50M), .START(C20k), .DATA1(audio_out), .DATA2(NC), .RST(1'b0), .D1(D1), .D2(D2), .CLK_OUT(CLK_OUT), .nSync(nSync), .DONE(NC));
 
 endmodule

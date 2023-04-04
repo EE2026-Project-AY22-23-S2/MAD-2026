@@ -20,10 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module AudioInModule(input CLOCK, input J_MIC_Pin3, output J_MIC_Pin1, J_MIC_Pin4, output reg [8:0] led,
-output reg [6:0] seg, output reg [3:0] an);
+module AudioInModule(input CLOCK, input [11:0] MIC_in, output reg [8:0] led,
+output reg [7:0] seg, output reg [3:0] an);
 wire clk20k;
-wire [11:0] MIC_in;
+
 reg [11:0] fixed_peak = 0;
 reg [31:0] COUNT = 0;
 reg [11:0] curr = 0;
@@ -38,19 +38,19 @@ reg [3:0] vol_level;
 //seven_segment segm(clk20k, vol_level, seg, an);
 
 
-Audio_Input my_audio_unit(
-    .CLK(CLOCK),                  // 100MHz clock
-    .cs(clk20k),                   // sampling clock, 20kHz
-    .MISO(J_MIC_Pin3),                 // J_MIC3_Pin3, serial mic input
-    .clk_samp(J_MIC_Pin1),            // J_MIC3_Pin1
-    .sclk(J_MIC_Pin4),            // J_MIC3_Pin4, MIC3 serial clock
-    .sample(MIC_in)     // 12-bit audio sample data
-);
+//Audio_Input my_audio_unit(
+//    .CLK(CLOCK),                  // 100MHz clock
+//    .cs(clk20k),                   // sampling clock, 20kHz
+//    .MISO(J_MIC_Pin3),                 // J_MIC3_Pin3, serial mic input
+//    .clk_samp(J_MIC_Pin1),            // J_MIC3_Pin1
+//    .sclk(J_MIC_Pin4),            // J_MIC3_Pin4, MIC3 serial clock
+//    .sample(MIC_in)     // 12-bit audio sample data
+//);
 
 // 12 bit value -> 4095 (max vol)
 //CHANGED LED SEG AND AN TO REG, REMOVE INSTANTIATION
 
-always @ (posedge clk20k)
+always @ (posedge CLOCK)
 begin
     curr = MIC_in; // Read sample val into curr 
     if (curr > peak)
@@ -61,70 +61,70 @@ begin
     COUNT = COUNT + 1;
     
     // AFTER 0.2s
-    if (COUNT >= 4000)
+    if (COUNT >= 20_000_000)
     begin
         COUNT <= 0; // reset count
         fixed_peak = peak;
         peak <= 0;
         
-        if (fixed_peak < 2048) begin
+        if (fixed_peak < 2090) begin
             vol_level <= 0;
             led <= 0; 
-            seg <= 7'b1000000;
+            seg <= 8'b11000000;
             an <= 4'b1110;
             end
-        else if (fixed_peak >= 2048 && fixed_peak < 2100) begin
+        else if (fixed_peak >= 2090 && fixed_peak < 2180) begin
             vol_level <= 1;
             an <= 4'b1110;
-            seg <= 7'b1111001;
+            seg <= 8'b11111001;
             led <= 1'b1;
             end
-        else if (fixed_peak >= 2100 && fixed_peak < 2250) begin
+        else if (fixed_peak >= 2180 && fixed_peak < 2290) begin
             vol_level <= 2;
             an <= 4'b1110;
-            seg <= 7'b0100100; 
+            seg <= 8'b10100100; 
             led <= 2'b11;
             end
-        else if (fixed_peak >= 2250 && fixed_peak < 2400) begin
+        else if (fixed_peak >= 2290 && fixed_peak < 2400) begin
             vol_level <= 3;
             an <= 4'b1110;
-            seg <= 7'b0110000;
+            seg <= 8'b10110000;
             led <= 3'b111;
             end
         else if (fixed_peak >= 2400 && fixed_peak < 2650) begin
             vol_level <= 4;
             an <= 4'b1110;
-            seg <= 7'b0011001;
+            seg <= 8'b10011001;
             led <= 4'b1111;
             end
         else if (fixed_peak >= 2650 && fixed_peak < 2900) begin
             vol_level <= 5;
             an <= 4'b1110;
-            seg <= 7'b0010010;
+            seg <= 8'b10010010;
             led <= 5'b11111;
             end
         else if (fixed_peak >= 2900 && fixed_peak < 3200) begin
             vol_level <= 6;
             an <= 4'b1110;
-            seg <= 7'b0000010; 
+            seg <= 8'b10000010; 
             led <= 6'b111111;
             end
         else if (fixed_peak >= 3200 && fixed_peak < 3450) begin
             vol_level <= 7;
             an <= 4'b1110;
-            seg <= 7'b1111000; 
+            seg <= 8'b11111000; 
             led <= 7'b1111111;
             end
         else if (fixed_peak >= 3450 && fixed_peak < 3700) begin
             vol_level <= 8;
             an <= 4'b1110;
-            seg <= 7'b0000000; 
+            seg <= 8'b10000000; 
             led <= 8'b11111111;
             end
         else if (fixed_peak >= 3700 && fixed_peak < 4095) begin
             vol_level <= 9;
             an <= 4'b1110;
-            seg <= 7'b0010000;
+            seg <= 8'b10010000;
             led <= 9'b111111111;
             end
         else

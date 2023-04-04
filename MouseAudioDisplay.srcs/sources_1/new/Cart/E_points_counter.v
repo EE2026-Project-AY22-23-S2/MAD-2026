@@ -32,7 +32,7 @@ module points_counter(
     
     always @(posedge clk_1hz) begin
         if (car_y == coin_y + 7) begin
-            if (coin_x <= car_x + 10 && coin_x >= car_x ) begin
+            if (coin_x + 5 <= car_x + 10 && coin_x >= car_x ) begin
                 points <= points + 1;
             end
         end

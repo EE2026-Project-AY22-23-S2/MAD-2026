@@ -67,6 +67,14 @@ module displayOLED(
         end
         else if ((x >= car_x && x <= car_x+10) && (y >= car_y && y <= car_y + 10)) begin //car
             oled_data <= 16'hF800;
+            if((( x >= car_x && x < car_x + 2) || (x > car_x + 8 && x <= car_x+10)) && ((y >= car_y + 1 && y <= car_y + 2) || (y >= car_y + 7 && y <= car_y + 8))) begin
+                oled_data <= 16'h0000;
+            end
+            else if (( x >= car_x + 4 && x <= car_x + 6) && (y == car_y + 1 || y == car_y + 2)) begin
+                oled_data <= 16'b00000000000011111;              
+            end else begin
+                oled_data <= 16'hF800;
+            end
         end
         else if ((x >= 5 && x <= 7) || (x >= 89 && x <= 91)) begin //yellow road
             oled_data <= 16'hFFE0;
